@@ -1,0 +1,44 @@
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usetheme{AnnArbor}
+\usecolortheme{dolphin}
+
+\title{Control systems presentation-1}
+\author{V.L.Narasimha Reddy - EE18BTECH11046 }
+
+\date{February 2020}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Theory}
+\textbf{Steps to finding Root locus of a Closed Loop Transfer system}
+\begin{itemize}
+    \item Let's say we have a closed-loop transfer function for a particular system:
+    $$\frac{N(s)}{D(s)}=\frac{K G(s)}{1+K G(s) H(s)}$$
+    \item Then the characteristic equation which gives poles is: $1+KG(s)H(s)=0$
+    \\*
+    \smallskip
+    Then, $$K G(s) H(s)+1=0 \rightarrow G(s) H(s)=\frac{-1}{K}$$
+    \\*
+    \smallskip
+    Let's assume that $$\frac{a(s)}{b(s)}=\frac{-1}{K}$$
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Theory}
+    \begin{itemize}
+        \item We put roots of a(s) as points (Zeroes) and roots of b(s) as cross mark (poles)
+        \item A Root-Locus line starts at every pole
+        \item We start from right hand side of graph and move towards left
+        \item Therefore, any place that two poles appear to be connected by a root locus line on the real-axis, the two poles actually move towards each other, and then they "break away", and move off the axis
+        \item The point where the poles break off the axis is called the \textbf{Breakaway point}
+        \item Once a pole breaks away from the real axis, they can either travel out towards infinity (to meet an implicit zero), or they can travel to meet an explicit zero, or they can re-join the real-axis to meet a zero that is located on the real-axis.
+    \end{itemize}
+\end{frame}
+
+\end{document}
