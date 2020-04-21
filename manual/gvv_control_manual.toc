@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Signal Flow Graph}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Mason's Gain Formula}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Matrix Formula}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Bode Plot}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Example}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Phase}{2}{subsection.2.3}
+\contentsline {section}{\numberline {3}Second order System}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}Damping}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Example}{2}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Settling Time}{2}{subsection.3.3}
+\contentsline {section}{\numberline {4}Routh Hurwitz Criterion}{2}{section.4}
+\contentsline {subsection}{\numberline {4.1}Routh Array}{2}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Marginal Stability}{2}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Stability}{2}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Example}{2}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Example}{2}{subsection.4.5}
+\contentsline {section}{\numberline {5}State-Space Model}{2}{section.5}
+\contentsline {subsection}{\numberline {5.1}Controllability and Observability}{2}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Second Order System}{2}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Example}{2}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Example}{2}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Example}{2}{subsection.5.5}
+\contentsline {section}{\numberline {6}Nyquist Plot}{2}{section.6}
+\contentsline {subsection}{\numberline {6.1}Introduction}{2}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Example}{2}{subsection.6.2}
+\contentsline {section}{\numberline {7}Compensators}{2}{section.7}
+\contentsline {subsection}{\numberline {7.1}Phase Lead}{2}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Example}{2}{subsection.7.2}
+\contentsline {section}{\numberline {8}Gain Margin}{2}{section.8}
+\contentsline {subsection}{\numberline {8.1}Introduction}{2}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Example}{2}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Example}{2}{subsection.8.3}
+\contentsline {section}{\numberline {9}Phase Margin}{2}{section.9}
+\contentsline {subsection}{\numberline {9.1}Intoduction}{2}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Example}{2}{subsection.9.2}
+\contentsline {section}{\numberline {10}Oscillator}{2}{section.10}
+\contentsline {subsection}{\numberline {10.1}Introduction}{2}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Example}{2}{subsection.10.2}
+\contentsline {section}{\numberline {11}Root Locus}{2}{section.11}
