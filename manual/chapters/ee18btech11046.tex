@@ -59,7 +59,7 @@ where q is any integer between (0,(P-Z)-1)
 Steps for to find the point at which root locus intersects imaginary axis
 \begin{itemize}
 \item If all elements of any row of the Routh array of charactteristic equation are zero, then the root locus branch intersects the imaginary axis and vice-versa.
-\item Identify the row in such a way that if we make the first element as zero, then the elements of the entire row are zero. Find the value of K for this combination.
+\item Identify the row in such a way that if we make the first element as zero, then the elements of the entire row are zero. Find the value of K($K>0$) for this combination.
 \item Substitute this K value in the auxiliary equation. You will get the intersection point of the root locus branch with an imaginary axis.
 
 
@@ -146,9 +146,9 @@ Point of intersection of y axis using Routh Array
 
  \begin{align}
 \mydet{s^2\\s^1\\s^0}
-\mydet{1 & 5 \\ 6k-2 \\ 5}
+\mydet{1 & 5 \\ 6k+2 \\ 5}
 \end{align}\\
-Since no row can be zero completely, This Root locus doen't intersect y axis.
+Since no row can be zero completely for any $K>0$, So this Root locus doen't intersect imaginary axis.
 
 
 
@@ -192,4 +192,3 @@ codes/ee18btech11046.py
 \end{lstlisting}    
 
 \end{enumerate}
-
