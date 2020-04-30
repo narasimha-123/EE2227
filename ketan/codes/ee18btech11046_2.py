@@ -37,7 +37,7 @@ plt.legend()
 
 
 #if using termux
-#fig1.savefig('./figs/ee18btech11046_2.pdf')
-#fig1.savefig('./figs/ee18btech11046_2.eps')
+#plt.savefig('./figs/ee18btech11046_2.pdf')
+#plt.savefig('./figs/ee18btech11046_2.eps')
 #subprocess.run(shlex.split("termux-open ./figs/ee18btech11046_2.pdf"))
 plt.show()
