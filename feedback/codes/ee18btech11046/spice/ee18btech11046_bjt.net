@@ -1,0 +1,30 @@
+I-V Characteristics of BC547
+*Choosing npn transistor with beta = 100
+.MODEL Qmod NPN(BF=100)
+
+*Input current source
+Is 1 0 SIN(0 1u 10K 0 0)
+*npn transistor
+q1 2 1 0 Qmod
+*feedback resistance
+rf 1 2 100K
+
+rl 2 3 10K
+Vcc 3 0 5V
+
+
+* ANALYSIS
+.AC DEC 10 10 10MEG
+.TRAN 0.01US 1MS
+*
+
+* VIEW RESULTS
+.control
+run
+plot v(2)
+*plot V1#branch
+wrdata ee18btech11046_1.dat V(2)
+.endc 
+
+.end
+

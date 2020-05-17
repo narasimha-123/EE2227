@@ -1,0 +1,358 @@
+For the feedback transresistance amplifier in \ref{fig:ee18btech11046_Question}), use small-signal analysis to find the open-loop gain 'G', Feedback factor 'H' and Closed-loop gain 'T'. Let $R_{F}>>R_{L}$ and $r_{o}>>R_{L}$. Find the value of T for $R_{L}=10K\ohm$, $R_{F}=100K\ohm$ and the transistor current gain $\beta = 100$.
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}    
+\item Draw the equivalent control system for the feedback Transresistance amplifier shown in \ref{fig:ee18btech11046_Question}
+\renewcommand{\thefigure}{\theenumi.\arabic{figure}}
+\begin{figure}[h!]
+	\begin{center}
+		\resizebox{\columnwidth/1}{!}{\input{./figs/ee18btech11046/ee18btech11046_figa.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:ee18btech11046_Question}
+\end{figure}
+\\
+
+%
+\solution see Fig. \ref{fig:ee18btech11046_ControlSystem}
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11046/ee18btech11046_figb.tex}}
+	\end{center}
+	\caption{}
+	\label{fig:ee18btech11046_ControlSystem}
+\end{figure}
+\renewcommand{\thefigure}{\theenumi}
+
+%
+
+\item For the feedback Transresistance amplifier shown in \ref{fig:ee18btech11046_Question}, Draw its small signal model. Early effect in Transistor is neglected.
+\\
+
+%
+\solution see Fig. \ref {fig:ee18btech11046_smallSig}
+
+While drawing a Small-Signal Model, we
+ground all constant voltage sources and open
+all constant current sources. All Small-Signal
+paramters are obtained from DC-Analysis of
+the circuit. Neglecting Early effect, in SmallSignal Analysis a npn-Transistor is modelled as
+a Current Source with value of current equal to
+$g_{m}V_{be}$ flowing from Collextor to Emitter. Whereas
+a pnp-Transistor is modelled as a Current Source
+with value of current equal to $g_{m}V_{be}$ flowing
+from Emitter to Collector.
+
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11046/ee18btech11046_figc.tex}}
+	\end{center}
+	\caption{Small Signal Model}
+	\label{fig:ee18btech11046_smallSig}
+\end{figure}
+\renewcommand{\thefigure}{\theenumi}
+
+%
+
+
+\item Find small signal parameters 
+ $g_{m}$ and $v_{be}$ using DC analysis
+\\
+%
+\solution
+small signal parameters of bjt are given in
+\eqref{eq:ee18btech11046_gm} and \eqref{eq:ee18btech11046_rpi}
+\begin{align}
+g_{m} = \frac{I_{C}}{V_{T}}
+\label{eq:ee18btech11046_gm}
+\end{align}
+\begin{align}
+r_{\pi} = \frac{V_{T}}{I_{B}}
+\label{eq:ee18btech11046_rpi}
+\end{align}
+The Large signal model of circuit becomes as shown in figure \ref{fig:ee18btech11046_largeSig}
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11046/ee18btech11046_figl.tex}}
+	\end{center}
+	\caption{Large signal model}
+	\label{fig:ee18btech11046_largeSig}
+\end{figure}
+\renewcommand{\thefigure}{\theenumi}
+
+
+Where $V_{T} = 25m$volts
+\begin{align}
+V_{BE} = 0.7 volts 
+\implies
+V_{B} = 0.7 volts
+\end{align}
+
+\begin{align}
+I_{E} = I_{B} + I_{C}
+\end{align}
+\begin{align}
+I_{C} = \beta I_{B}
+\end{align}
+
+From applying KVL and KCL on Fig.
+\begin{align}
+V_{cc} - I_{E}R_{L} - I_{B}R_{F} - 0.7 = 0
+\\
+\implies
+V_{cc} - \brak{\beta+1}I_{B}R_{L} - I_{B}R_{F} - 0.7 = 0
+\end{align}
+\begin{align}
+I_{B} = \frac{V_{cc}-0.7}{\brak{\beta+1}R_{L}+R_{F}}
+\label{eq:ee18btech11046_IB}
+\end{align}
+\begin{align}
+I_{C} = \beta \frac{V_{cc}-0.7}{\brak{\beta+1}R_{L}+R_{F}}
+\label{eq:ee18btech11046_IC}
+\end{align}
+from \eqref{eq:ee18btech11046_gm}, \eqref{eq:ee18btech11046_rpi},$I_{B}$ and $I_{C}$
+\begin{align}
+g_{m} = \frac{\beta}{V_{T}}\frac{V_{cc}-0.7}{\brak{\beta+1}R_{L}+R_{F}}
+\label{eq:ee18btech11046_gmval}
+\end{align}
+
+\begin{align}
+r_{\pi} = V_{T}\frac{\brak{\beta+1}R_{L}+R_{F}}{V_{cc}-0.7}
+\label{eq:ee18btech11046_rpival}
+\end{align}
+
+%
+
+\item Write all node/loop equations of Small-Signal model using KCL/KVL.Given that $R_{F} >> R_{L}$\\
+%
+\solution
+\begin{align}
+v_{be} = I_{i}r_{\pi}
+\label{eq:ee18btech11046_eq1}
+\end{align}
+\begin{align}
+v_{be} - I_{F}R_{F} = V_{o}
+\label{eq:ee18btech11046_eq2}
+\end{align}
+\begin{align}
+V_{o} = \brak{I_{F} - g_{m}v_{be}}R_{L}
+\label{eq:ee18btech11046_eq3}
+\end{align}
+%
+
+\item Find the expression for feedback factor H.\\
+%
+\solution
+\begin{align}
+H = \frac{I_{F}}{V_{o}}
+\end{align}
+substituting \eqref{eq:ee18btech11046_eq2} in \eqref{eq:ee18btech11046_eq3}
+\begin{align}
+V_{o} = \brak{I_{F}-g_{m}V_{o}-g_{m}I_{F}R_{F}}R_{L}
+\\
+\implies
+\brak{1+g_{m}R_{L}}V_{o} = I_{F}\brak{R_{L}-g_{m}R_{F}R_{L}}
+\end{align}
+\begin{align}
+H = \frac{I_{F}}{V_{o}} = \frac{1+g_{m}R_{L}}{R_{L}\brak{1-g_{m}R_{F}}}
+\label{eq:ee18btech11046_H}
+\\
+\implies H \approx -\frac{1}{R_{F}}
+\label{eq:ee18btech11046_Happrox}
+\end{align}
+%
+
+\item Find the expression for Open loop Gain G.\\
+%
+\solution
+\begin{align}
+G = \frac{V_{o}}{I_{i}}
+\end{align}
+ Substituting \eqref{eq:ee18btech11046_eq1} in \eqref{eq:ee18btech11046_eq2} and subistituting $I_{F}$ from
+\eqref{eq:ee18btech11046_H}
+\begin{align}
+I_{i}r_{\pi} -\brak{\frac{1+g_{m}R_{L}}{R_{L}\brak{1-1+g_{m}R_{F}}}}R_{F}V_{o} = V_{o}
+\\
+\implies
+G = \frac{V_{o}}{I_{i}} = \frac{r_{\pi}R_{L}\brak{1-g_{m}R_{F}}}{R_{F}+R_{L}}
+\label{eq:ee18btech11046_G}
+\end{align}
+Upon approximating since $R_{F} >> R_{L}$
+\begin{align}
+G = -g_{m}r_{\pi}R_{L}
+\label{eq:ee18btech11046_Gapprox}
+\end{align}
+
+%
+\item Find the expression for Closed Loop Gain $T = \frac{V_{o}}{I_{s}}$
+%
+We know that Closed Loop Gain
+\begin{align}
+T = \frac{G}{1+GH}
+\end{align}
+Substituting expressions from \eqref{eq:ee18btech11046_Happrox} and \eqref{eq:ee18btech11046_G}
+\begin{align}
+T = -\frac{g_{m}r_{\pi}R_{L}}{1+\brak{\frac{g_{m}r_{\pi}R_{L}}{R_{F}}}}
+\label{eq:ee18btech11046_T}
+\end{align}
+%
+
+\item For the parameters given in table \ref{table:ee18btech11046_Table_1} . Find G,H and T.
+%
+\begin{table}[!ht]
+\centering
+\input{./tables/ee18btech11046/ee18btech11046_table1.tex}
+\caption{}
+\label{table:ee18btech11046_Table_1}
+\end{table}
+%
+\solution
+Substituting the parameters in \eqref{eq:ee18btech11046_gmval} and \eqref{eq:ee18btech11046_rpival} gives,
+\begin{align}
+r_{\pi} = 6.6667\times 10^{3} \ohm
+\\
+g_{m} = 0.015 S 
+\end{align}
+Substituting $g_{m}$, $r_{\pi}$ obtained in 
+\eqref{eq:ee18btech11046_Happrox}
+\begin{align}
+H = -10^{-5}
+\end{align}
+Substituting $g_{m}$, $r_{\pi}$ obtained in 
+\eqref{eq:ee18btech11046_Gapprox}
+\begin{align}
+G = -10^{6}
+\end{align}
+Substituting $g_{m}$, $r_{\pi}$ obtained in 
+\eqref{eq:ee18btech11046_T}
+\begin{align}
+T = -90909.09
+\end{align}
+
+\item Draw the block diagram and circuit diagram for H.
+\\
+\solution see figs \ref{fig:ee18btech11046_Hblock}  and \ref{fig:ee18btech11046_fc}
+%
+\renewcommand{\thefigure}{\theenumi.\arabic{figure}}
+
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11046/ee18btech11046_figd.tex}}
+	\end{center}
+	\caption{Feedback block diagram}
+	\label{fig:ee18btech11046_Hblock}
+\end{figure}
+
+%
+%
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11046/ee18btech11046_fige.tex}}
+	\end{center}
+	\caption{Feedback circuit}
+	\label{fig:ee18btech11046_fc}
+\end{figure}
+\renewcommand{\thefigure}{\theenumi}
+%
+
+From KVl on \ref{fig:ee18btech11046_fc} we can see that
+\begin{align}
+H=\frac{I_{F}}{V_{o}} = -\frac{1}{R_{F}}
+\end{align}
+
+\item Find the input and output resistances of the feedback network.\\
+\solution
+From the feedback amplifier circuit fig.\ref{fig:ee18btech11046_fc}
+To find the input resistance $R_{11}$ short
+the output node $V_{o}$ to ground.
+\begin{align}
+R_{11} = R_{F}
+\end{align}
+To find the output resistance $R_{22}$ rempve the current source and short input terminals.
+\begin{align}
+R_{22} = R_{F}
+\end{align}
+
+\item Draw the block diagram and circuit diagram for G.
+\\
+\solution see figs \ref{fig:ee18btech11046_Gblock} and \ref{fig:ee18btech11046_Gcir}
+%
+\renewcommand{\thefigure}{\theenumi.\arabic{figure}}
+
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11046/ee18btech11046_figf.tex}}
+	\end{center}
+	\caption{Open loop block diagram}
+	\label{fig:ee18btech11046_Gblock}
+\end{figure}
+
+%
+\begin{figure}[ht!]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{\input{./figs/ee18btech11046/ee18btech11046_figg.tex}}
+	\end{center}
+	\caption{Open loop block circuit diagram}
+	\label{fig:ee18btech11046_Gcir}
+\end{figure}
+
+\item Find G
+\\
+\solution
+From fig.\ref{fig:ee18btech11046_Gcir},
+\begin{align}
+V_{be} = I_{i}r_{\pi}
+\end{align}
+From KCL at node $V_{o}$,
+\begin{align}
+I_{o} = -g_{m}I_{i}r_{\pi}
+\end{align}
+\begin{align}
+V_{o} = -g_{m}I_{i}r_{\pi}R_{L}
+\end{align}
+Therefore,
+\begin{align}
+G =\frac{V_{o}}{I_{i}} = -g_{m}r_{\pi}R_{L}
+\end{align}
+
+\item Simulate the circuit using ngspice
+\\
+\solution
+The following file gives instructions on how to simulate the circuit.
+\begin{lstlisting}
+codes/ee18btech11046/spice/README
+\end{lstlisting}
+
+The following netlist simulates the feedback amplifier using parameters in table \ref{table:ee18btech11046_Table_1}.
+\begin{lstlisting}
+codes/ee18btech11046/spice/ee18btech11046_bjt.net
+\end{lstlisting}
+
+The Output Voltage obtained from spice is plotted in fig.\ref{fig:ee18btech11046_spice}
+%
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/ee18btech11046/ee18btech11046.eps}
+\caption{Output Voltage}
+\label{fig:ee18btech11046_spice}
+\end{figure}
+%
+
+\begin{lstlisting}
+codes/ee18btech11046/spice/ee18btech11046.py
+\end{lstlisting}
+We can observe that $V_{o}$ is sum of sine wave amplified by a factor of 89500 for small signal input and large signal output $V_{C}$ which is close to the calculated values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
