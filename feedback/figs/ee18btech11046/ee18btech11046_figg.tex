@@ -1,0 +1,11 @@
+
+\begin{circuitikz}[american,node distance = 30pt]
+\draw (0,0) node[ground]{};
+\draw (0,0) to [I,l=$I_{s}$]++(0,2);
+\draw (0,2) to [short]++(1,0) to [short,i=$I_{i}$]++(1,0);
+\draw (2,2) to [R,v=$v_{be}$,l=$r_{\pi}$] ++(0,-2) to [short]++(3,0) to[I,invert,l=$g_{m}$$v_{be}$]++(0,2);
+\draw (5,2) to [short]++(2,0) to [R,i=$I_{o}$,l=$R_{L}$]++(0,-2);
+\draw (7,2) to [short,-o]++(2,0) node[right]{$V_{o}$};
+\draw (3.5,0) node[ground]{};
+\draw (7,0) node[ground]{};
+\end{circuitikz}
