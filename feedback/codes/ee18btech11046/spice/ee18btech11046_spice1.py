@@ -18,10 +18,10 @@ plt.grid()
 plt.xlabel("time in sec")
 plt.ylabel("Output Voltage")
 plt.title('Closed loop system Output Voltage')
-plt.show()
+#plt.show()
 
 
 #if using termux
-#plt.savefig('./figs/ee18btech11046/ee18btech11046_spice_result1.pdf')
-#plt.savefig('./figs/ee18btech11046/ee18btech11046_spice_result1.eps')
-#subprocess.run(shlex.split("termux-open ./figs/ee18btech11046/ee18btech11046_spice_result1.pdf"))
+plt.savefig('./figs/ee18btech11046/ee18btech11046_spice_result1.pdf')
+plt.savefig('./figs/ee18btech11046/ee18btech11046_spice_result1.eps')
+subprocess.run(shlex.split("termux-open ./figs/ee18btech11046/ee18btech11046_spice_result1.pdf"))
